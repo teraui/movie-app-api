@@ -2,7 +2,7 @@ const express = require("express");
 var cors = require("cors")
 const apiKeyGuard = require('./middlewares/api-key-guard');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 8080;
 
 const version = require('./configs/version');
 const api = require('./routes/api-route');
