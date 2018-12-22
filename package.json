@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node": "v8.9.4"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "cors": "^2.8.5",
