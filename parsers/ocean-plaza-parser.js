@@ -1,3 +1,5 @@
+process.binding('http_parser').HTTPParser = require('http-parser-js').HTTPParser;
+
 const requestPromise = require('request-promise');
 const cheerio = require('cheerio');
 
