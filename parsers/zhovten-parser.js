@@ -36,7 +36,7 @@ async function getMovie(id) {
     movie.name = name.length ? name.text() : null;
     movie.imageUrl = imageContainer.length ? normalizeUrl(imageContainer.find("img").attr("src")) : null;
     movie.description = description.length ? description.find("p").text() : null;
-    movie.todayDate = todayDateContainer.length ? todayDateContainer.find(".selected").text() : null;
+    movie.todayDate = Date.now();
 
     if (scheduleHallsContainer.length) {
       const hallsSchedule = [];

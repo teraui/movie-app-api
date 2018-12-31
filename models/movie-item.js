@@ -5,7 +5,7 @@ class MovieItem {
             name, 
             imageUrl, 
             description, 
-            todaDate, 
+            todayDate, 
             halls, 
             age, 
             director, 
@@ -21,7 +21,7 @@ class MovieItem {
         this.name = name;                 // string                          
         this.imageUrl = imageUrl;         // string  
         this.description = description;   // string  
-        this.todaDate = todaDate;         // string
+        this.todayDate = todayDate;         // string
         this.halls = halls;               // {name: string, sessions: string[]}[]
         this.age = age;                   // string                  
         this.director = director;         // string
