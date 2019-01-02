@@ -9,7 +9,7 @@ const vkinoListInstance = new vkinoListParser("mx-kiev-skymall");
 
 router.get("/", (_, res) => {
     const today = date.todayYYYYMMDD();
-    
+    console.log(today);
     vkinoListInstance.list({date: today, lang: "ua"})
       .then(list => {
         const dto = JSON.stringify(list);

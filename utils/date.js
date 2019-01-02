@@ -1,9 +1,9 @@
+const moment = require("moment");
+require("moment-timezone");
+
 module.exports = {
   todayYYYYMMDD: function() {
-    const date = new Date();
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    return year + "-" + month + "-" + day;
+    const now = moment();
+    return now.tz("Europe/Kiev").format("YYYY-MM-DD");
   }
 }
