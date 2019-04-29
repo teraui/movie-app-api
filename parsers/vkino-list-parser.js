@@ -86,9 +86,10 @@ class VkinoListParser {
 
     if (!image.length) return null;
 
-    const src = image.attr("data-src");
-    
-    return src;
+    const srcset = image.attr("data-srcset");
+    const [smallImage, undefined, bigImage] = srcset.split(/\s/);
+  
+    return bigImage ? bigImage : smallImage;
   }
 
   schedule(item, $) {
