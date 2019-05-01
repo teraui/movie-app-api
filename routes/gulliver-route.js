@@ -17,7 +17,7 @@ router.get("/", (_, res) => {
       })
       .catch(error => {
         const dto = JSON.stringify(error);
-        res.send(error);
+        res.send(dto);
       });
 });
 
