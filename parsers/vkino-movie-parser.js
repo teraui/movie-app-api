@@ -45,6 +45,8 @@ class VkinoMovieParser {
         lang: null
       });
 
+      console.log(movieItem, 'movieItem');
+
       return movieItem;
 
     } catch(error) {
@@ -86,7 +88,7 @@ class VkinoMovieParser {
 
     if (!schedule.length) return null;
 
-    const hall = {name: "", sessions: []};
+    const sessions = [];
     const dataArray = Array.from(schedule.children());
     
     for (let i = 0; i < dataArray.length; i++) {
@@ -97,10 +99,10 @@ class VkinoMovieParser {
       if (!session.length) continue;
       
       if (!session.text().length) continue;
-      hall.sessions.push(session.text());
+      sessions.push(session.text());
     }
     
-    return [hall];
+    return sessions;
   }
 
   age(container) {

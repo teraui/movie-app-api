@@ -39,18 +39,8 @@ async function getMovie(id) {
     movie.todayDate = Date.now();
 
     if (scheduleHallsContainer.length) {
-      const hallsSchedule = [];
-
-      scheduleHallsContainer.children().each((_, hall) => {
-        const hallName = $(hall).find(".schedule__hall__name").text();
-        const sessions = Array.from($(".schedule__hall__sessions").children());
-        hallsSchedule.push({
-          name: hallName,
-          sessions: sessions.map(session => $(session).children().remove().end().text())
-        });
-      });
-
-      movie.halls = hallsSchedule;
+      const sessions = Array.from($(".schedule__hall__sessions").children());
+      movie.halls = sessions.map(session => $(session).children().remove().end().text())
     }
 
     if (generalInfo.length) {
